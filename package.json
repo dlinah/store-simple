@@ -1,0 +1,39 @@
+{
+  "name": "contacts",
+  "version": "0.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "rm -r dist ; babel lib -d dist --copy-files",
+    "nodemon": "nodemon --exec babel-node lib/index.js",
+    "start": "node dist/index.js",
+    "postinstall": "npm run build",
+    "init-db": "./scripts/initdb.sh"
+  },
+  "engines": {
+    "node": "^v8.11.1",
+    "npm": "^5.6.0"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-cli": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "express": "^4.16.4",
+    "helmet": "^3.15.0",
+    "mongo-queue": "^1.0.0",
+    "mongoose": "^4.11.3",
+    "nodemailer": "^4.6.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dlinah/contactList"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
